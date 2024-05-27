@@ -1,36 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product preview card component</title>
+    <!-- <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    /> -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- google font - Montserrat  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  Perfume
+    <!-- google font - Fraunces  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  Gabrielle Essence Eau De Parfum
+    <!-- font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
+    <!-- tailwindcss  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryDarkCyan: 'hsl(158, 36%, 37%)',
+              primaryCream: 'hsl(30, 38%, 92%)',
+              neutralVeryDarkBlue: 'hsl(212, 21%, 14%)',
+              neutralDarkGrayishBlue: 'hsl(228, 12%, 48%)',
+              neutralWhite: 'hsl(0, 0%, 100%)',
+              neutralVeryDarkCyan: 'hsl(158, 43%, 18%)'
+            },
+            fontFamily: {
+              montserrat: ['Montserrat'],
+              fraunces: ['Fraunces']
+            }
+          }
+        }
+      };
+    </script>
 
-  $149.99
-  $169.99
+    <!-- index.css  -->
+    <link rel="stylesheet" href="./index.css" />
+    <title>Frontend Mentor | Product preview card component</title>
+  </head>
+  <body
+    class="text-xs font-montserrat flex flex-col justify-center items-center min-h-screen bg-primaryCream"
+  >
+    <!-- card   -->
+    <main class="w-[343px] xl:w-[600px] xl:flex bg-neutralWhite rounded-xl">
+      <!-- image  -->
+      <section class="xl:w-1/2">
+        <img
+          class="rounded-t-xl xl:hidden"
+          src="./images/image-product-mobile.jpg"
+          alt="image-product-mobile"
+        />
+        <img
+          class="hidden xl:inline-block xl:rounded-l-xl"
+          src="./images/image-product-desktop.jpg"
+          alt=""
+        />
+      </section>
+      <!-- constent -->
+      <section class="p-6 flex flex-col gap-3 xl:w-1/2 xl:gap-7">
+        <p>P E R F U M E</p>
+        <h1 class="font-bold font-fraunces text-3xl text-neutralVeryDarkBlue">
+          Gabrielle Essence Eau De Parfum
+        </h1>
+        <p class="text-sm text-neutralDarkGrayishBlue">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <h1 class="text-3xl font-bold text-primaryDarkCyan font-fraunces">
+          $149.99
+          <s
+            class="text-neutralDarkGrayishBlue text-xs font-normal align-middle ml-3"
+          >
+            $169.99
+          </s>
+        </h1>
+        <button
+          class="bg-primaryDarkCyan hover:bg-neutralVeryDarkCyan text-neutralWhite p-3 rounded-lg"
+        >
+          <i class="fa-solid fa-cart-shopping mr-2"></i>Add to Cart
+        </button>
+      </section>
+    </main>
 
-  Add to Cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="attribution mt-3">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. <br />Coded by
+      <a href="https://www.frontendmentor.io/profile/DearNatthaphong"
+        >Natthaphong Thongphueng</a
+      >.
+    </footer>
+  </body>
 </html>
